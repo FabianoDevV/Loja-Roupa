@@ -1,0 +1,13 @@
+:root {
+  --primary-color: #ffffff;
+  --seconda-color: #4f39f7;
+
+  --text-hover: #b289f4;
+
+  --category-loja: #b289f4;
+
+  --text-color: black;
+  --text-apagado: #858595;
+
+  --transition: all 0.3s ease;
+}

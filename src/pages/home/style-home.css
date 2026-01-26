@@ -1,0 +1,142 @@
+main {
+  max-width: 8;
+  color: black;
+}
+
+section {
+  max-width: 1400px;
+  margin: auto;
+}
+
+section.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60vh;
+  margin: auto;
+}
+
+section .context-hero {
+  width: 50%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+section .context-hero .infor-hero .title-hero {
+  font-size: 60px;
+}
+
+section .context-hero .infor-hero .des-hero {
+  padding: 1rem 0;
+  font-size: x-large;
+  color: #858595;
+}
+
+section .context-hero .btns-heros {
+  display: flex;
+  align-items: center;
+
+  margin: 0.8rem 0;
+}
+
+section .context-hero .btns-heros .promo {
+  padding: 1.1rem;
+  /* background: var(--text-hover); */
+  border-radius: 0.3rem;
+  color: var(--text-color);
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  cursor: pointer;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: larger;
+  border-radius: 0.6rem;
+  border: 2px solid var(--seconda-color);
+}
+
+section .context-hero .btns-heros .promo:hover {
+  background-color: var(--seconda-color);
+  color: var(--primary-color);
+}
+
+section .context-hero .valid-hero {
+  display: flex;
+  justify-content: flex-start;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  align-items: center;
+  gap: 0 6rem;
+}
+
+section .context-hero .valid-hero div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  color: #858595;
+}
+
+section .context-hero .valid-hero div span {
+  font-size: x-large;
+}
+
+section .context-hero-img img {
+  width: 100%;
+  border-radius: 0.6rem;
+
+  box-shadow: 3px 4px 8px 0px #00000078;
+}
+
+section .context-hero-img {
+  width: 50%;
+  max-width: 600px;
+  padding: 1rem;
+}
+
+/* Category */
+
+.title-category {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.title-category h2 {
+  font-size: xx-large;
+}
+
+.title-category p {
+  font-size: larger;
+  color: var(--text-apagado);
+}
+
+article .categorys {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7rem;
+  margin: 3rem;
+}
+
+/* Cards */
+
+.title-section-cards {
+  display: flex;
+  justify-content: center;
+}
+
+.content-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}

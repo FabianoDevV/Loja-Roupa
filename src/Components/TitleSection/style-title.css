@@ -1,0 +1,19 @@
+.title-section {
+  display: inline-block;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.title-section::after {
+  content: '';
+  margin-top: 0.5rem;
+  display: flex;
+  width: 100%;
+  height: 3px;
+  background-color: blue;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}

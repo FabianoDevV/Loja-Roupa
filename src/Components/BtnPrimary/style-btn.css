@@ -1,0 +1,28 @@
+.catalogo {
+  padding: 1.1rem;
+  background: var(--seconda-color);
+  border-radius: 0.6rem;
+  border: 2px solid var(--seconda-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+  margin: 0 1.1rem 0 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: larger;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+.catalogo:hover {
+  background-color: var(--seconda-color);
+  box-shadow: 0 0 6px 0 black;
+}

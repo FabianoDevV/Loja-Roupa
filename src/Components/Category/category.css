@@ -1,0 +1,32 @@
+.category-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.category-card .icone-category {
+  padding: 2rem 2.1rem;
+  border-radius: 3rem;
+  color: white;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+.category-card:hover .icone-category {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.61);
+  transform: scale(1.09);
+  -webkit-transform: scale(1.09);
+  -moz-transform: scale(1.09);
+  -ms-transform: scale(1.09);
+  -o-transform: scale(1.09);
+}
+
+.category-card .icone-category svg {
+  width: 35px;
+  box-sizing: content-box;
+  height: 35px;
+}
