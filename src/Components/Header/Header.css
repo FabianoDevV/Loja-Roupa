@@ -3,7 +3,7 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 0.9rem 0;
-  background: linear-gradient(100deg, #5837f7, #921afa99);
+  background: var(--gradient-principal);
 }
 
 header .logor_loja {
@@ -18,27 +18,6 @@ header .logor_destaq {
   color: red;
 }
 
-nav ul {
-  display: flex;
-  list-style: none;
-  align-items: center;
-  justify-content: center;
-  margin: 1rem;
-}
-
-nav ul li a {
-  padding: 1.1rem;
-  transition: var(--transition);
-  -webkit-transition: var(--transition);
-  -moz-transition: var(--transition);
-  -ms-transition: var(--transition);
-  -o-transition: var(--transition);
-}
-
-nav ul li a:hover {
-  color: var(--text-hover);
-}
-
 header .action-header ul {
   display: flex;
   align-items: center;
@@ -48,11 +27,11 @@ header .action-header ul {
 header .action-header ul li {
   cursor: pointer;
   padding: 0.5rem;
-  border-radius: 0.3rem;
-  -webkit-border-radius: 0.3rem;
-  -moz-border-radius: 0.3rem;
-  -ms-border-radius: 0.3rem;
-  -o-border-radius: 0.3rem;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
   transition: background 0.2s ease;
   -webkit-transition: background 0.2s ease;
   -moz-transition: background 0.2s ease;
@@ -91,7 +70,7 @@ header .action-header ul li a svg {
 
 .search-header input {
   width: 100%;
-  padding: 0.6rem;
+  padding: 0.8rem;
   border-radius: 0.5rem;
   border: 1px solid;
   outline: none;
@@ -102,4 +81,34 @@ header .action-header ul li a svg {
 
 .search-header input::placeholder {
   color: white;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: center;
+}
+
+nav ul li a {
+  font-size: large;
+  text-shadow: 0 0 6px 0 var(--seconda-color);
+  padding: 1.1rem;
+  transition: var(--transition);
+  -webkit-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -ms-transition: var(--transition);
+  -o-transition: var(--transition);
+}
+
+nav ul li a:hover {
+  color: var(--seconda-color);
+}
+
+.menu-sticky {
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
+  padding: 1rem;
 }

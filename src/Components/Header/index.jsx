@@ -38,7 +38,7 @@ export default function Header() {
         </div>
       </header>
 
-      <nav>
+      <nav className="menu-sticky">
         <ul>
           <li>
             <a href="#">Roupas</a>

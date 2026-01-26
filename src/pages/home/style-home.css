@@ -127,12 +127,46 @@ article .categorys {
 }
 
 /* Cards */
+section.cards-product {
+  margin: 4rem auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 .title-section-cards {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1190px;
+  margin: 2rem auto 1rem auto;
+
+  width: 100%;
 }
 
+.title-section-cards a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--seconda-color);
+  font-size: larger;
+}
+
+.title-section-cards .title-cards h2 {
+  font-size: x-large;
+  margin: 0.3rem 0;
+}
+
+.title-section-cards .title-cards p {
+  font-size: larger;
+  color: var(--text-apagado);
+}
+
+.title-section-cards .title-section-cards .title-cards {
+  margin: 3rem;
+}
 .content-cards {
   display: flex;
   flex-wrap: wrap;

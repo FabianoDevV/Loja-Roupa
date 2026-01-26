@@ -69,11 +69,18 @@ export default function Home() {
         </div>
       </article>
 
-      <section>
+      <section className="cards-product">
         <div className="title-section-cards">
-          <TitleSection>
-            <h2>Recomendações</h2>
-          </TitleSection>
+          <div className="title-cards">
+            <h2>Produtos em Destaque</h2>
+            <p>Selecionados especialmente para você</p>
+          </div>
+
+          <div>
+            <a href="#">
+              Ver todos <ArrowRight />
+            </a>
+          </div>
         </div>
 
         <div className="content-cards">{loading ? <Loading /> : error ? <Error /> : <Cards />}</div>

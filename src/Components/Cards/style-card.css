@@ -6,32 +6,49 @@
 }
 
 .card .infor-card h3 {
-  max-width: 280px;
-  overflow: hidden;
-  word-wrap: break-word;
-  text-overflow: ellipsis;
+  max-width: 200px;
   display: -webkit-box;
-  -webkit-box-orient: horizontal;
   margin: 0.5rem 0.1rem;
-  color: #1a1a1a;
-  line-height: 1.3;
+  color: #1e2939bf;
+
+  height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
-.card .infor-card p {
-  width: 100%;
-  max-width: 280px;
-  overflow: hidden;
-  -webkit-line-clamp: 3;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  margin: 0.5rem 0.1rem;
-  color: #1a1a1a;
-  line-height: 1.3;
+.infor-card .rating {
+  display: flex;
+  align-items: center;
 }
 
 .about-card {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+}
+
+.about-card h4 {
+  font-size: x-large;
+  margin: 0.5rem 0;
+  color: var(--seconda-color);
+}
+
+.about-card span {
+  color: #3a3a41;
+}
+
+.about-card .catalogo {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  padding: 0.8rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
+  gap: 0.5rem;
+  background: var(--gradient-principal);
+  border: 2px solid var(--gradient-principal);
+  margin: 1rem 0;
 }
