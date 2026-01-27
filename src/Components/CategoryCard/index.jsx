@@ -2,7 +2,7 @@ import './category.css';
 import { categorias } from '../../data/Category';
 import { Shirt, Laptop, Sofa, ShoppingBag, LayoutGrid } from 'lucide-react';
 
-export default function Category() {
+export default function CategoryCard() {
   const iconMap = {
     Shirt: <Shirt />,
     Laptop: <Laptop />,

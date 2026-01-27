@@ -3,6 +3,7 @@ import { dateContext } from '../dateContext';
 
 export default function UseContextLoja({ children }) {
   const [products, setProducts] = useState([]);
+  const [cart, setCart] = useState([]);
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
@@ -27,7 +28,7 @@ export default function UseContextLoja({ children }) {
   }, []);
 
   return (
-    <dateContext.Provider value={{ products, error, loading, setProducts }}>
+    <dateContext.Provider value={{ products, error, loading, cart, setCart }}>
       {children}
     </dateContext.Provider>
   );

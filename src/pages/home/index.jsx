@@ -11,11 +11,10 @@ import Loading from '../../Components/Loading';
 
 import { useContext } from 'react';
 import { dateContext } from '../../context/dateContext';
-import Category from '../../Components/Category';
+import Category from '../../Components/CategoryCard';
 
 export default function Home() {
-  const { error, loading, data } = useContext(dateContext);
-  console.log('Loading:', loading, 'Error:', error); // Debug line
+  const { error, loading } = useContext(dateContext);
   return (
     <main>
       <section className="hero">
