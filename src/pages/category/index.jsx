@@ -1,13 +1,13 @@
+import './style.css';
+import { useParams } from 'react-router-dom';
+import Cards from '../../Components/Cards';
+
 export default function Category() {
+  const { name } = useParams();
+  console.log(name);
   return (
-    <>
-      <div>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente aperiam minima dolore
-          ipsa sequi distinctio quod ut ipsum nisi! Libero ut asperiores necessitatibus amet porro
-          accusamus unde saepe nulla itaque?
-        </p>
-      </div>
-    </>
+    <section className="category-page">
+      <Cards filter={name} />
+    </section>
   );
 }

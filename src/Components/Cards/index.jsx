@@ -1,44 +1,41 @@
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect } from 'react';
 import BtnPrimary from '../BtnPrimary';
 import './style-card.css';
 import { dateContext } from '../../context/dateContext';
 import { StarIcon, ShoppingCartIcon } from 'lucide-react';
 
-export default function Cards() {
-  const { products, setCart } = useContext(dateContext);
-  const [productList, setProductList] = useState([]);
+export default function Cards({ qtd, filter }) {
+  const { products, cart, setCart } = useContext(dateContext);
 
-  // multiplica o preço por dois
-  useEffect(() => {
-    const transform = products
-      .slice(0, 20)
-      .filter((p) => {
-        const urlImg = p.images[0] || '';
+  let product = products;
 
-        const validImg =
-          urlImg.includes('placehold') || urlImg.includes('any') || urlImg.includes('default');
-        return !validImg;
-      })
-      .map((p) => ({
-        ...p,
-        price: p.price * 2,
-      }));
-    setProductList(transform);
-  }, [products]);
+  if (qtd) product = products.slice(0, qtd);
+
+  if (filter) product = products.filter((p) => p.category.name === filter);
+  console.log(product);
 
   // Adicionando o produto no carrinho
   function AddToCart(product) {
-    setCart((prevCart) => ({
-      ...prevCart,
-      [product.id]: product,
-    }));
+    setCart((prevCart) => {
+      // validação: ver se o produto ja existe no carrinho
+      const productExists = prevCart.find((item) => item.id === product.id);
+
+      if (productExists) {
+        // quantidade de produto no msm carrinho
+        return prevCart.map((item) =>
+          item.id === product.id ? { ...item, qty: item.qty + 1 } : item
+        );
+      }
+
+      return [...prevCart, { ...product, qty: 1 }];
+    });
   }
 
-  function handleErroImg(idProductErro) {
-    setProductList((prevList) => prevList.filter((p) => p.id !== idProductErro));
-  }
+  useEffect(() => {
+    console.log(cart);
+  }, [cart]);
 
-  return productList.map((product) => {
+  return product.map((product) => {
     const { id, price, images, title } = product;
 
     // logica de divisão
@@ -48,7 +45,7 @@ export default function Cards() {
     return (
       <div className="card" key={id}>
         <div className="img-card">
-          <img src={images[0]} alt="" onError={() => handleErroImg(product.id)} />
+          <img src={images[0]} alt="" />
         </div>
         <div className="infor-card">
           <div className="rating">

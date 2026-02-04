@@ -53,6 +53,8 @@ header .action-header ul li:hover {
 
 header .action-header ul li a svg {
   color: var(--primary-color);
+  position: relative;
+  fill: currentColor;
 }
 
 .search-header {
@@ -111,4 +113,67 @@ nav ul li a:hover {
   background: white;
   z-index: 1;
   padding: 1rem;
+}
+
+/* icone com a quantidade de itens no carrinho */
+
+.cart-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cart-qty {
+  position: absolute;
+  top: -11px;
+  right: -0px;
+  background: var(--gradient-principal);
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.icon-cart-fixed {
+  display: inline-block;
+  position: fixed;
+  z-index: 2;
+  padding: 1rem;
+  border-radius: 3rem;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+}
+
+.icon-cart-fixed .cart-icon-flutuante {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.icon-cart-fixed .cart-qty {
+  position: absolute;
+  top: -11px;
+  right: -0px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.cart-icon-flutuante svg {
+  color: #921afa;
+  fill: #921afa;
 }

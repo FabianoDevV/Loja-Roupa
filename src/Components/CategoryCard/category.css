@@ -6,6 +6,13 @@
   cursor: pointer;
 }
 
+.category-card a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+}
+
 .category-card .icone-category {
   padding: 2rem 2.1rem;
   border-radius: 3rem;

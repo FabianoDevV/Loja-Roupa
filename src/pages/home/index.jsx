@@ -82,7 +82,9 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="content-cards">{loading ? <Loading /> : error ? <Error /> : <Cards />}</div>
+        <div className="content-cards">
+          {loading ? <Loading /> : error ? <Error /> : <Cards qtd={12} />}
+        </div>
       </section>
     </main>
   );

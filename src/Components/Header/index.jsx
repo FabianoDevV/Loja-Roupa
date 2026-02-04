@@ -1,7 +1,13 @@
+import { useContext } from 'react';
 import './Header.css';
 import { User, SearchIcon, ShoppingCart } from 'lucide-react';
+import { dateContext } from '../../context/dateContext';
+import { Link } from 'react-router-dom';
 
 export default function Header() {
+  const { cart } = useContext(dateContext);
+
+  const qtdCart = cart.length;
   return (
     <>
       <header>
@@ -30,7 +36,10 @@ export default function Header() {
             </li>
             <li>
               <a href="#">
-                <ShoppingCart />
+                <span className="cart-icon">
+                  {qtdCart >= 1 && <span className="cart-qty">{qtdCart}</span>}
+                  <ShoppingCart />
+                </span>
                 Carrinho
               </a>
             </li>
@@ -38,22 +47,31 @@ export default function Header() {
         </div>
       </header>
 
+      {qtdCart > 0 && (
+        <div className="icon-cart-fixed">
+          <span className="cart-icon-flutuante">
+            {qtdCart >= 1 && <span className="cart-qty">{qtdCart}</span>}
+            <ShoppingCart />
+          </span>
+        </div>
+      )}
+
       <nav className="menu-sticky">
         <ul>
           <li>
-            <a href="#">Roupas</a>
+            <Link to="/category/Clothes">Roupas</Link>
           </li>
           <li>
-            <a href="#">Eletrônicos</a>
+            <Link to="/category/Electronics">Eletrônicos</Link>
           </li>
           <li>
-            <a href="#">Móveis</a>
+            <Link to="/category/Furniture">Móveis</Link>
           </li>
           <li>
-            <a href="#">Sapatos</a>
+            <Link to="/category/Shoes">Sapatos</Link>
           </li>
           <li>
-            <a href="#">Diversos</a>
+            <Link to="/category/Miscellaneous">Diversos</Link>
           </li>
         </ul>
       </nav>
