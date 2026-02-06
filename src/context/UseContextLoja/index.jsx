@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { dateContext } from '../dateContext';
 
+import { filterProductValid } from '../../utils/filterProductValid';
+
 export default function UseContextLoja({ children }) {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState([]);
@@ -15,31 +17,8 @@ export default function UseContextLoja({ children }) {
 
         const data = await response.json();
 
-        const validProducts = data
-          .filter((p) => {
-            const imgUrl = p.images?.[0] || '';
-            const urlInvalid = [
-              'placeimg.com',
-              'placehold.co',
-              'api.escuelajs.co/api/v1/files/',
-              'images.unsplash.com',
-            ];
-
-            // sem imagem → remove
-            if (!imgUrl) return false;
-
-            // se tiver domínio inválido → remove
-            if (urlInvalid.some((p) => imgUrl.includes(p))) return false;
-
-            // se preço menor que 20 → remove
-            if (p.price > 8000) return false;
-
-            return true;
-          })
-          .map((p) => ({
-            ...p,
-            price: p.price * 2,
-          }));
+        // validação do produto
+        const validProducts = filterProductValid(data);
 
         setProducts(validProducts);
         setLoading(false);
