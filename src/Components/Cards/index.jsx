@@ -12,7 +12,6 @@ export default function Cards({ qtd, filter }) {
   if (qtd) product = products.slice(0, qtd);
 
   if (filter) product = products.filter((p) => p.category.name === filter);
-  console.log(product);
 
   // Adicionando o produto no carrinho
   function AddToCart(product) {

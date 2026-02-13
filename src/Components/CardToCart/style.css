@@ -1,0 +1,49 @@
+.card-cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0.9rem;
+}
+
+.cart-img img {
+  width: 160px;
+  border-radius: 1rem;
+}
+
+.infor-cart {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  height: 164px;
+  justify-content: space-evenly;
+  width: 100%;
+  max-width: 360px;
+}
+
+.infor-cart h4 {
+  font-size: larger;
+}
+
+.infor-cart p {
+  font-size: x-large;
+  color: var(--seconda-color);
+}
+
+.infor-cart .actionCart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.infor-cart .actionCart .remove-cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: red;
+  cursor: pointer;
+}
+.infor-cart .actionCart .qtd-cart {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}

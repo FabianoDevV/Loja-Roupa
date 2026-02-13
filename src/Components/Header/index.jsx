@@ -35,25 +35,27 @@ export default function Header() {
               </a>
             </li>
             <li>
-              <a href="#">
+              <Link to="/cart">
                 <span className="cart-icon">
                   {qtdCart >= 1 && <span className="cart-qty">{qtdCart}</span>}
                   <ShoppingCart />
                 </span>
                 Carrinho
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
       </header>
 
       {qtdCart > 0 && (
-        <div className="icon-cart-fixed">
-          <span className="cart-icon-flutuante">
-            {qtdCart >= 1 && <span className="cart-qty">{qtdCart}</span>}
-            <ShoppingCart />
-          </span>
-        </div>
+        <Link to="/cart">
+          <div className="icon-cart-fixed">
+            <span className="cart-icon-flutuante">
+              {qtdCart >= 1 && <span className="cart-qty">{qtdCart}</span>}
+              <ShoppingCart />
+            </span>
+          </div>
+        </Link>
       )}
 
       <nav className="menu-sticky">

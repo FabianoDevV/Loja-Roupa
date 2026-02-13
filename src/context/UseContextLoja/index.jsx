@@ -16,9 +16,11 @@ export default function UseContextLoja({ children }) {
         if (!response.ok) throw new Error('Error HTTP: ' + response.status);
 
         const data = await response.json();
+        console.log(data);
 
         // validação do produto
         const validProducts = filterProductValid(data);
+        console.log(validProducts);
 
         setProducts(validProducts);
         setLoading(false);
